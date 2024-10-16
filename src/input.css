@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes dealCard {
+    0% { 
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0) rotate(var(--rotation));
+        opacity: 1;
+    }
+}
+
+@layer utilities {
+    .deal-card {
+        animation: dealCard 0.8s ease-out forwards;
+    }
+}
